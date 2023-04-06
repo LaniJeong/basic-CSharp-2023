@@ -66,6 +66,10 @@ namespace wf03_property
 
             TxtResult.Font = new Font((string)CboFontFamily.SelectedItem, (float)fontSize, style);
 
+        }
+
+        void ChangeIndent()
+        {
             if (RdoNormal.Checked)      // 라디오버튼 추가 이벤트
             {
                 TxtResult.Text.Trim();
@@ -191,7 +195,7 @@ namespace wf03_property
 
         private void RdoNormal_CheckedChanged(object sender, EventArgs e)
         {
-            ChangeFontStyle();
+            ChangeIndent();
         }
 
         private void RdoIndent_CheckedChanged(object sender, EventArgs e)
@@ -202,6 +206,18 @@ namespace wf03_property
         private void BtnLoad_Click(object sender, EventArgs e)
         {
             PcbDummy.Image = Bitmap.FromFile("cat.png");
+        }
+
+        private void PcbDummy_Click(object sender, EventArgs e)
+        {
+            if (PcbDummy.SizeMode == PictureBoxSizeMode.Zoom)
+            {
+                PcbDummy.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+            else
+            {
+                PcbDummy.SizeMode = PictureBoxSizeMode.Zoom;
+            }
         }
     }
 }

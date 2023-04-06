@@ -321,6 +321,7 @@
             this.PcbDummy.Size = new System.Drawing.Size(321, 175);
             this.PcbDummy.TabIndex = 0;
             this.PcbDummy.TabStop = false;
+            this.PcbDummy.Click += new System.EventHandler(this.PcbDummy_Click);
             // 
             // BtnLoad
             // 
