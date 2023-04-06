@@ -20,3 +20,8 @@
   - 클래스
 - Win App
   - Winforms 컨트롤
+  - 리스트뷰, 데이터그리드 추가학습 
+  
+<3일차 WinForm 학습 결과>
+
+<img src ="https://raw.githubusercontent.com/LaniJeong/basic-CSharp-2023/6dd7eaf62451c236514e53132908391a573f9158/Day03/Day03WinApp/image/WinApp.png" width="700" />
