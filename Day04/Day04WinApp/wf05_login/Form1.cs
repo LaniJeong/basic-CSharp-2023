@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace wf05_login
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+
+
+        private void BtnLogin_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "abcd" && textBox2.Text == "1234")
+            {
+                MessageBox.Show("로그인 성공", "로그인", MessageBoxButtons.OK, icon: MessageBoxIcon.);
+                LblResult.Text = "로그인 성공";
+            }
+            else
+            {
+                // MessageBox.Show("로그인 실패");
+                LblResult.Text = "로그인 실패";
+
+            }
+
+        }
+    }
+}
