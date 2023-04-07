@@ -34,3 +34,10 @@
   - Winforms 컨트롤리마무리
   - Winforms 파일복사 앱
   - 로그인앱 실습
+
+## 5일차
+- C# 기본
+  - 
+- Win App
+  - Winforms디자인 오류시 해결방법
+  - Winforms 탐색기 만들기
