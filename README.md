@@ -33,4 +33,4 @@
 - Win App
   - Winforms 컨트롤리마무리
   - Winforms 파일복사 앱
-  - 로그인앱 실
+  - 로그인앱 실습
