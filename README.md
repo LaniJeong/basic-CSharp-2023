@@ -25,3 +25,12 @@
 <3일차 WinForm 학습 결과>
 
 <img src ="https://raw.githubusercontent.com/LaniJeong/basic-CSharp-2023/6dd7eaf62451c236514e53132908391a573f9158/Day03/Day03WinApp/image/WinApp.png" width="700" />
+
+## 4일차
+- C# 기본
+  - 클래스 상속 계속
+  - 인터페이스
+- Win App
+  - Winforms 컨트롤리마무리
+  - Winforms 파일복사 앱
+  - 로그인앱 실
