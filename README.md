@@ -38,7 +38,8 @@
 ## 5일차
 - C# 기본
   - 인터페이스, 추상 클래스
-  - 프로퍼
+  - 프로퍼티
+  - 배열, 컬렉션
 - Win App
   - Winforms디자인 오류시 해결방법
   - Winforms 탐색기 만들기
@@ -46,3 +47,13 @@
 <5일차 파일탐색기 만들기>
 
 <img src ="https://raw.githubusercontent.com/LaniJeong/basic-CSharp-2023/main/Day05/Day05WinApp/wf07_myexplorer/myexplorer.png" width="700" />
+
+## 6일차
+- C# 기본
+  - 컬렉션
+  - 일반화 프로그래밍
+  - 예외처리
+- Win App
+  - 탐색기 마무리
+  - DB연동
+  - BookRentalShop DB 사용 WinForms 앱개
