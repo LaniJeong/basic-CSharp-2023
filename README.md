@@ -60,6 +60,19 @@
     - 컨텍스트 메뉴(마우스 오른쪽 메뉴)
     - 보호된 운영체제 폴더 숨기기
     - 리스트뷰 폴더 더블클릭 하위폴더 표시
-  - DB연동
-  - BookRentalShop DB 사용 WinForms 앱개발
-  - 실습 예제
+  - DB핸들링
+ 
+<5일차 파일탐색기 만들기>
+
+<img src ="https://raw.githubusercontent.com/LaniJeong/basic-CSharp-2023/main/Day06/Day06WinApp/%ED%8C%8C%EC%9D%BC%ED%83%90%EC%83%89%EA%B8%B0.png" width="700" />
+
+## 6일차
+- C# 기본
+  - 컬렉션
+  - 일반화(Generic) 프로그래밍
+  - 예외처리
+  - 대리자, 이벤트
+- Win App
+  - BookRentalShop 
+  - 실습예제
+
