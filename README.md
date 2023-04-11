@@ -56,4 +56,4 @@
 - Win App
   - 탐색기 마무리
   - DB연동
-  - BookRentalShop DB 사용 WinForms 앱개
+  - BookRentalShop DB 사용 WinForms 앱개발
