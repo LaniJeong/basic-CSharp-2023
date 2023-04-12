@@ -73,8 +73,10 @@
   - 애트리뷰
   - 파일핸들링
   - 추가 공부(LINQ, 리플렉션, 
+
 - Win App
   - DB핸들링
+  - SDI vs MDI
   - BookRentalShop  DB 사용 WinForms 앱개발
   - 실습예제
 
