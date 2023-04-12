@@ -66,13 +66,15 @@
 
 <img src ="https://raw.githubusercontent.com/LaniJeong/basic-CSharp-2023/main/Day06/Day06WinApp/%ED%8C%8C%EC%9D%BC%ED%83%90%EC%83%89%EA%B8%B0.png" width="700" />
 
-## 6일차
+## 7일차
 - C# 기본
-  - 컬렉션
-  - 일반화(Generic) 프로그래밍
-  - 예외처리
   - 대리자, 이벤트
+  - 람다식
+  - 애트리뷰
+  - 파일핸들링
+  - 추가 공부(LINQ, 리플렉션, 
 - Win App
-  - BookRentalShop 
+  - DB핸들링
+  - BookRentalShop  DB 사용 WinForms 앱개발
   - 실습예제
 
