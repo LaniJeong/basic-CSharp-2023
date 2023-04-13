@@ -18,6 +18,7 @@
 ## 3일차
 - C# 기본
   - 클래스
+  
 - Win App
   - Winforms 컨트롤
   - 리스트뷰, 데이터그리드 추가학습 
@@ -30,6 +31,7 @@
 - C# 기본
   - 클래스 상속 계속
   - 인터페이스
+  
 - Win App
   - Winforms 컨트롤리마무리
   - Winforms 파일복사 앱
@@ -54,6 +56,7 @@
   - 일반화(Generic) 프로그래밍
   - 예외처리
   - 대리자, 이벤트
+  
 - Win App
   - 탐색기 마무리
     - 추가개발 리스트
@@ -72,7 +75,7 @@
   - 람다식
   - 애트리뷰
   - 파일핸들링
-  - 추가 공부(LINQ, 리플렉션, 
+  - 추가 공부(LINQ, 리플렉션) 
 
 - Win App
   - DB핸들링
@@ -80,3 +83,12 @@
   - BookRentalShop  DB 사용 WinForms 앱개발
   - 실습예제
 
+## 8일차
+- C# 기본
+  - file handling
+  - 스레드 / 테스크
+  - 가비지 컬렉션
+
+- Win App
+  - BookRentalShop  DB 사용 WinForms 앱개발
+  - 실습예제
