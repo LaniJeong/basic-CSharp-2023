@@ -90,5 +90,9 @@
   - 가비지 컬렉션
 
 - Win App
+  - 메모장 만들기
   - BookRentalShop  DB 사용 WinForms 앱개발
-  - 실습예제
+
+<간단한 메모장 만들기>
+
+<img src ="https://raw.githubusercontent.com/LaniJeong/basic-CSharp-2023/main/Day08/Day08App/wf13_bookrentalshop/login.png" width="700" />
