@@ -62,8 +62,21 @@ namespace wf13_bookrentalshop
 
         }
 
+
         #endregion
 
-        
+        private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("종료하시겠습니까?", "확인", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                e.Cancel = false;
+                Environment.Exit(0);
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+            
+        }
     }
 }

@@ -65,6 +65,7 @@ namespace wf13_bookrentalshop
                 MessageBox.Show("패스워드를 입력하세요", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+
             string strUserId = "";
             string strPassword = "";
 
