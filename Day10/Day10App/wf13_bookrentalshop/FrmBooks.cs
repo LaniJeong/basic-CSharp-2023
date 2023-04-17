@@ -7,13 +7,13 @@ using wf13_bookrentalshop.Helpers;
 
 namespace wf13_bookrentalshop
 {
-    public partial class FrmGenre : Form
+    public partial class FrmBooks : Form
     {
         bool isNew = false; // false(UPDATE) / true(INSERT)
 
         #region < 생성자 >
 
-        public FrmGenre()
+        public FrmBooks()
         {
             InitializeComponent();
         }
@@ -57,7 +57,7 @@ namespace wf13_bookrentalshop
 
                 string strChkQuery = "SELECT COUNT(*) FROM bookstbl WHERE Division = @Division";
                 MySqlCommand chkCmd = new MySqlCommand(strChkQuery, conn);
-                MySqlParameter prmDivision = new MySqlParameter("@Division", TxtDivision.Text);
+                MySqlParameter prmDivision = new MySqlParameter("@Division", TxtBookIdx.Text);
                 chkCmd.Parameters.Add(prmDivision);
 
                 var result = chkCmd.ExecuteScalar();
@@ -87,9 +87,9 @@ namespace wf13_bookrentalshop
                 Debug.WriteLine(selData.ToString());
                 Debug.WriteLine(selData.Cells[0].Value);
                 Debug.WriteLine(selData.Cells[1].Value);
-                TxtDivision.Text = selData.Cells[0].Value.ToString();
-                TxtNames.Text = selData.Cells[1].Value.ToString();
-                TxtDivision.ReadOnly = true; // PK는 수정하면 안됨
+                TxtBookIdx.Text = selData.Cells[0].Value.ToString();
+                TxtAuthor.Text = selData.Cells[1].Value.ToString();
+                TxtBookIdx.ReadOnly = true; // PK는 수정하면 안됨
 
                 isNew = false; // 수정
             }
@@ -101,9 +101,9 @@ namespace wf13_bookrentalshop
 
         private void ClearInputs()
         {
-            TxtDivision.Text = TxtNames.Text = string.Empty;
-            TxtDivision.ReadOnly = false; // 신규일땐 입력가능
-            TxtDivision.Focus();
+            TxtBookIdx.Text = TxtAuthor.Text = string.Empty;
+            TxtBookIdx.ReadOnly = false; // 신규일땐 입력가능
+            TxtBookIdx.Focus();
             isNew = true; // 신규
         }
 
@@ -113,13 +113,13 @@ namespace wf13_bookrentalshop
             var result = true;
             var errorMsg = string.Empty;
 
-            if (string.IsNullOrEmpty(TxtDivision.Text))
+            if (string.IsNullOrEmpty(TxtBookIdx.Text))
             {
                 result = false;
                 errorMsg += "● 장르명을 입력하세요.\r\n";
             }
 
-            if (string.IsNullOrEmpty(TxtNames.Text))
+            if (string.IsNullOrEmpty(TxtAuthor.Text))
             {
                 result = false;
                 errorMsg += "● 장르명을 입력하세요.\r\n";
@@ -146,9 +146,18 @@ namespace wf13_bookrentalshop
                     if (conn.State == ConnectionState.Closed) conn.Open();
 
                     // 쿼리 작성
-                    var selQuery = @"SELECT Division
-                                          , Names
-                                       FROM divtbl";
+                    var selQuery = @"SELECT b.bookIdx,
+	                                        b.Author,
+                                            b.Division,
+                                            d.Names AS DivNAmes,
+                                            b.Names,
+                                            b.ReleaseDate,
+                                            b.ISBN,
+                                            b.Price
+                                       FROM bookstbl AS b
+                                      INNER JOIN divtbl AS d
+	                                     ON b.Division = d.Division
+                                   ORDER BY b.bookIdx ASC";
                     MySqlDataAdapter adapter = new MySqlDataAdapter(selQuery, conn);
                     DataSet ds = new DataSet();
                     adapter.Fill(ds, "divtbl"); // divtbl으로 DataSet 접근가능
@@ -157,8 +166,19 @@ namespace wf13_bookrentalshop
                     //DgvResult.DataSource = ds;
                     //DgvResult.DataMember = "divtbl";
 
-                    DgvResult.Columns[0].HeaderText = "장르코드";
-                    DgvResult.Columns[1].HeaderText = "장르명";
+                    DgvResult.Columns[0].HeaderText = "번호";
+                    DgvResult.Columns[1].HeaderText = "저자명";
+                    DgvResult.Columns[2].HeaderText = "책장르";
+                    DgvResult.Columns[3].HeaderText = "책장르";
+                    DgvResult.Columns[4].HeaderText = "책제목";
+                    DgvResult.Columns[5].HeaderText = "출판일자";
+                    DgvResult.Columns[6].HeaderText = "ISBN";
+                    DgvResult.Columns[7].HeaderText = "책가격";
+
+                    DgvResult.Columns[0].Width = 55;
+                    DgvResult.Columns[2].Visible = false;       // B001 코드영역 보일필요 없음
+                    DgvResult.Columns[5].Width = 78;
+                    DgvResult.Columns[5].Width = 70;
                 }
             }
             catch (Exception ex)
@@ -192,8 +212,8 @@ namespace wf13_bookrentalshop
                     }
 
                     MySqlCommand cmd = new MySqlCommand(query, conn);
-                    MySqlParameter prmDivision = new MySqlParameter("@Division", TxtDivision.Text);
-                    MySqlParameter prmNames = new MySqlParameter("@Names", TxtNames.Text);
+                    MySqlParameter prmDivision = new MySqlParameter("@Division", TxtBookIdx.Text);
+                    MySqlParameter prmNames = new MySqlParameter("@Names", TxtAuthor.Text);
                     cmd.Parameters.Add(prmDivision);
                     cmd.Parameters.Add(prmNames);
 
@@ -229,7 +249,7 @@ namespace wf13_bookrentalshop
                                         WHERE Division = @Division";
 
                     MySqlCommand cmd = new MySqlCommand(query, conn);
-                    MySqlParameter prmDivision = new MySqlParameter("@Division", TxtDivision.Text);
+                    MySqlParameter prmDivision = new MySqlParameter("@Division", TxtBookIdx.Text);
                     cmd.Parameters.Add(prmDivision);
 
                     var result = cmd.ExecuteNonQuery(); // INSERT, UPDATE, DELETE

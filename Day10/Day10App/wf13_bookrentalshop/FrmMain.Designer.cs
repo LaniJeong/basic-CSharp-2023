@@ -43,6 +43,8 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.LblUserId = new System.Windows.Forms.ToolStripStatusLabel();
+            this.LblLoginDatetime = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -140,7 +142,9 @@
             // statusStrip
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel});
+            this.toolStripStatusLabel,
+            this.LblUserId,
+            this.LblLoginDatetime});
             this.statusStrip.Location = new System.Drawing.Point(0, 500);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 18, 0);
@@ -151,8 +155,20 @@
             // toolStripStatusLabel
             // 
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(31, 17);
-            this.toolStripStatusLabel.Text = "상태";
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(86, 17);
+            this.toolStripStatusLabel.Text = "로그인 아이디:";
+            // 
+            // LblUserId
+            // 
+            this.LblUserId.Name = "LblUserId";
+            this.LblUserId.Size = new System.Drawing.Size(56, 17);
+            this.LblUserId.Text = "LblUserId";
+            // 
+            // LblLoginDatetime
+            // 
+            this.LblLoginDatetime.Name = "LblLoginDatetime";
+            this.LblLoginDatetime.Size = new System.Drawing.Size(102, 17);
+            this.LblLoginDatetime.Text = "LblLoginDatetime";
             // 
             // FrmMain
             // 
@@ -196,6 +212,8 @@
         private System.Windows.Forms.ToolStripMenuItem MniMember;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem MniRental;
+        private System.Windows.Forms.ToolStripStatusLabel LblUserId;
+        private System.Windows.Forms.ToolStripStatusLabel LblLoginDatetime;
     }
 }
 

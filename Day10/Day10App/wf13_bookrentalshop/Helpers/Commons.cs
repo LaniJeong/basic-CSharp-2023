@@ -16,5 +16,8 @@ namespace wf13_bookrentalshop.Helpers
                                                    "Uid=root;" +
                                                    "Pwd=12345";
 
+        // 로그인 사용자 아이디 저장변수
+        // 프로그램 전체에서 이 데이터 사용
+        public static string LoginID = string.Empty;
     }
 }

@@ -79,6 +79,7 @@
             this.DgvResult.RowTemplate.Height = 23;
             this.DgvResult.Size = new System.Drawing.Size(334, 501);
             this.DgvResult.TabIndex = 0;
+            this.DgvResult.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvResult_CellClick);
             // 
             // groupBox1
             // 

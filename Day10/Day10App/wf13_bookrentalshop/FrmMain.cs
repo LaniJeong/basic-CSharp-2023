@@ -8,13 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using wf13_bookrentalshop.Helpers;
 
 namespace wf13_bookrentalshop
 {
     public partial class FrmMain : Form
     {
         #region < 각화면 폼 >
-        FrmGenre frmGenre = null;  // 책장르관리 객체변수
+        FrmGenre frmGenre = null;   // 책장르관리 객체변수
+        FrmBooks frmBooks = null;   // 책정보관리
 
         #endregion
 
@@ -34,6 +36,9 @@ namespace wf13_bookrentalshop
             FrmLogin frm = new FrmLogin();
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.ShowDialog();
+
+            LblUserId.Text = Commons.LoginID;
+            LblLoginDatetime.Text = "/" + DateTime.Now.ToString();
         }
 
         private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -67,7 +72,7 @@ namespace wf13_bookrentalshop
 
         private void MniBookInfo_Click(object sender, EventArgs e)
         {
-
+            frmBooks = ShowActiveForm(frmBooks,typeof(FrmBooks)) as FrmBooks;
         }
 
         private void MniMember_Click(object sender, EventArgs e)
@@ -115,5 +120,7 @@ namespace wf13_bookrentalshop
 
             return form;
         }
+
+      
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using wf13_bookrentalshop.Helpers;
 
 namespace wf13_bookrentalshop
 {
@@ -87,17 +88,17 @@ namespace wf13_bookrentalshop
                     {
                         strUserId = reader["userId"] != null ? reader["userId"].ToString() : "-";
                         strPassword = reader["password"] != null ? reader["password"].ToString() : "--";
-
+                        Commons.LoginID = strUserId;        // 프로그램전체에서 사용
                         return true;
                     }
                     else
                     {
                         MessageBox.Show($"로그인정보가 없습니다.", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Commons.LoginID = string.Empty;
                         return false;
                     }
                 } // conn.Close();
-
-                //MessageBox.Show($"{strUserId} / {strPassword}");
+                    //MessageBox.Show($"{strUserId} / {strPassword}");
             }
             catch (Exception ex)
             {
