@@ -105,3 +105,9 @@
   - BookRentalShop  DB 사용 WinForms 앱개발 계속
     - WinForms MDI
     - MySQL.Data Lib DB연동
+
+## 10일차
+- Win App
+  - BookRentalShop 만들기 마무리
+  
+- 코딩테스트
